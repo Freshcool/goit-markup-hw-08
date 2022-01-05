@@ -1,0 +1,38 @@
+
+.employment__title {
+    margin-bottom: 50px;
+    text-align: center;
+  
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.2;
+}
+  
+.employment__list {
+  display: flex;
+}
+
+.employment__item {
+  position: relative;
+
+  margin-right: 30px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.employment__text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 70px;
+  padding: 27px 0;
+
+  font-weight: bold;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: rgba(47, 48, 58, 0.8);
+  color: var(--title-color);
+}
