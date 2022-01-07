@@ -1,12 +1,19 @@
-.footer-container-main {
+ .footer-container-main {
+   @media screen and (min-width: 768px) {
     display: flex;
-    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   }
+   @media screen and (min-width: 1200px) {
     justify-content: space-between;
-}
+   }
+} 
   
 .footer-container {
+  @media screen and (min-width: 1200px) {
   display: flex;
   flex-direction: column;
+  }
 }
 
 .footer {
@@ -22,6 +29,9 @@
   line-height: 1.2;
   color: var(--button-background-color);
   text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-logo__studio {
@@ -46,23 +56,36 @@ color: var(--button-color);
 }
 
 .address-list__item {
-  margin-bottom: 9px;
-  &:last-child {
-    margin-bottom: 0;
-  }
+  display: flex;
+  justify-content: center;
+align-items: center;
+margin-bottom: 8px;
+&:last-child {
+  margin-bottom: 0;
+}
 }
 
 .join-container {
   display: flex;
-  justify-content: center;
   flex-direction: column;
-}
+  margin-top: 60px;
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+  }
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
+    align-items: center;
+  }
+} 
 
 .join-container__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   color: var(--background-color);
+  @media screen and (min-width: 768px) {
+    text-align: center;
+  }
 }
 
 .join-container__list {
@@ -74,6 +97,8 @@ color: var(--button-color);
 
 .join-list__item {
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin-right: 10px;
   width: 44px;
   height: 44px;
@@ -102,17 +127,25 @@ color: var(--button-color);
   fill: var(--background-color);
 }
 
+.subscribe-container {
+  margin-top: 60px;
+}
+
 .subscribe-container__form {
-  display: flex;
+  @media screen and (min-width: 1200px) {
+  display: flex
+  }
 }
 
 .subscribe-form {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .subscribe-container__text {
+  text-align: center;
   margin-bottom: 20px;
   line-height: 1.14;
   text-transform: uppercase;
@@ -120,7 +153,7 @@ color: var(--button-color);
 }
 
 .subscribe-form__input {
-  width: 358px;
+  width: 450px;
   height: 50px;
   padding: 15px 16px;
   background-color: transparent;
@@ -130,12 +163,15 @@ color: var(--button-color);
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
 }
 
 .subscribe-form__button {
   display: flex;
   align-items: center;
-  margin-left: 12px;
+margin-top: 20px;
   padding: 10px 28px 10px 29px;
   background-color: var(--button-background-color);
   color: var(--button-color);
@@ -152,6 +188,10 @@ color: var(--button-color);
   &:focus {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     transform: scale(1.02);
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
+    margin-top: 0;
   }
 }
 
