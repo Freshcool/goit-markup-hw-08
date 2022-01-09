@@ -12,11 +12,16 @@
 <body>
 
     <!-- header -->
-    <!-- <header class="header">
+    <header class="header">
         <div class="container header-container">
             <nav class="header-navigation">
                 <a href="./index.html" class="header-logo__web">Web<span class="header-logo__studio">Studio</span></a>
-                <ul class="header-nav">
+                <button>
+                    <svg class="header-menu" width="24" height="16">
+                        <use href="./images/icons.svg#icon-menu"></use>
+                    </svg>
+                </button>
+                <ul class="header-nav hidden-header">
                     <li class="header-nav__item">
                         <a href="./index.html" class="header-nav__link active">Студия</a>
                     </li>
@@ -28,7 +33,7 @@
                     </li>
                 </ul>
             </nav>
-            <ul class="contacts">
+            <ul class="contacts hidden-header">
                 <li class="contacts__item">
                     <a href="mailto:info@devstudio.com" class="contacts__link">
                         <svg class="contacts__icon-mail" width="16" height="12">
@@ -47,17 +52,17 @@
                 </li>  
             </ul>
         </div>
-    </header> -->
+    </header>
 
     <!-- main -->
     <main>
         <!-- hero section-->
-        <!-- <section class="hero-section">
+        <section class="hero-section">
             <div class="container hero">
                 <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
                 <button type="button" class="hero__button" data-modal-open>Заказать услугу</button>
             </div>
-        </section> -->
+        </section>
         
 
         <!--feature section-->
@@ -109,25 +114,58 @@
 
         <!--what we do-->
         
-        <!-- <section class="section">
+        <section class="section hidden-employment">
             <div class="container employment">
                 <h2 class="employment__title">Чем мы занимаемся</h2>
                 <ul class="employment__list">
                     <li class="employment__item">
-                        <img src="./images/device1.jpg" alt="device1" width="370">
+                        <picture>
+                            <source
+                                srcset="./images/device1.jpg 1x,
+                                        ./images/device1-2x.jpg 2x"
+                                media="(min-width: 1200px)"
+                            >
+                            <img 
+                                src="./images/device1.jpg" 
+                                alt="device1" 
+                                width="370"
+                            >
+                        </picture>
                         <p class="employment__text">Десктопные приложения</p>
                     </li>
                     <li class="employment__item">
-                        <img src="./images/device2.jpg" alt="device2" width="370">
+                        <picture>
+                            <source
+                                srcset="./images/device2.jpg 1x,
+                                        ./images/device2-2x.jpg 2x"
+                                media="(min-width: 1200px)"
+                            >
+                            <img 
+                                src="./images/device2.jpg" 
+                                alt="device2" 
+                                width="370"
+                            >
+                        </picture>
                         <p class="employment__text">Мобильные приложения</p>
                     </li>
                     <li class="employment__item">
-                        <img src="./images/device3.jpg" alt="device3" width="370">
+                        <picture>
+                            <source
+                                srcset="./images/device3.jpg 1x,
+                                        ./images/device3-2x.jpg 2x"
+                                media="(min-width: 1200px)"
+                            >
+                            <img 
+                                src="./images/device3.jpg" 
+                                alt="device3" 
+                                width="370"
+                            >
+                        </picture>
                         <p class="employment__text">Дизайнерские решения</p>
                     </li>
                 </ul>
             </div>
-        </section> -->
+        </section>
 
         <!--our team-->
 
@@ -136,7 +174,30 @@
                 <h2 class="team__title">Наша команда</h2>
                 <ul class="team__list">
                     <li class="team__item">
-                        <img src="./images/igordemianenko.jpg" alt="Игорь Демьяненко" width="270">
+                        <picture>
+                            <source
+                                srcset="
+                                ./images/igordemianenko.jpg 1x, 
+                                ./images/igordemianenko2x.jpg 2x"
+                                media="(min-width: 1200px)"
+                            >
+                            <source
+                                srcset="
+                                ./images/igordemianenkotable.jpg 1x, 
+                                ./images/igordemianenkotable2x.jpg 2x"
+                                media="(min-width: 768px)"
+                            >
+                            <source
+                                srcset="
+                                ./images/igordemianenkomb.jpg 1x, 
+                                ./images/igordemianenkomb2x.jpg 2x"
+                                media="(min-width: 320px)"
+                            >
+                            <img 
+                                src="./images/igordemianenko.jpg" 
+                                alt="Игорь Демьяненко"
+                            >
+                        </picture>
                         <h3 class="team__subtitle">Игорь Демьяненко</h3>
                         <p class="team__text">Product Designer</p>
                         <ul class="team__social social-list">
@@ -171,7 +232,30 @@
                         </ul>
                     </li>
                     <li class="team__item">
-                        <img src="./images/OlgaRepina.jpg" alt="Ольга Репина" width="270">
+                        <picture>
+                            <source
+                                srcset="
+                                    ./images/OlgaRepina.jpg 1x, 
+                                    ./images/OlgaRepina2x.jpg 2x"
+                                media="(min-width: 1200px)"
+                            >
+                            <source
+                                srcset="
+                                    ./images/OlgaRepinatable.jpg 1x, 
+                                    ./images/OlgaRepinatable2x.jpg 2x"
+                                media="(min-width: 768px)"
+                            >
+                            <source
+                                srcset="
+                                    ./images/OlgaRepinamb.jpg 1x, 
+                                    ./images/OlgaRepinamb2x.jpg 2x"
+                                media="(min-width: 320px)"
+                            >
+                            <img 
+                                src="./images/OlgaRepina.jpg" 
+                                alt="Ольга Репина"
+                            >
+                        </picture>
                         <h3 class="team__subtitle">Ольга Репина</h3>
                         <p class="team__text">Frontend Developer</p>
                         <ul class="team__social social-list">
@@ -206,7 +290,30 @@
                         </ul>
                     </li>
                     <li class="team__item">
-                        <img src="./images/NikolayTarasov.jpg" alt="Николай Тарасов" width="270">
+                        <picture>
+                            <source
+                                srcset="
+                                    ./images/NikolayTarasov.jpg 1x, 
+                                    ./images/NikolayTarasov2x.jpg 2x"
+                                media="(min-width: 1200px)"
+                            >
+                            <source
+                                srcset="
+                                    ./images/NikolayTarasovtable.jpg 1x, 
+                                    ./images/NikolayTarasovtable2x.jpg 2x"
+                                media="(min-width: 768px)"
+                            >
+                            <source
+                                srcset="
+                                    ./images/NikolayTarasovmb.jpg 1x, 
+                                    ./images/NikolayTarasovmb2x.jpg 2x"
+                                media="(min-width: 320px)"
+                            >
+                            <img 
+                                src="./images/NikolayTarasov.jpg" 
+                                alt="Николай Тарасов"
+                            >
+                        </picture>
                         <h3 class="team__subtitle">Николай Тарасов</h3>
                         <p class="team__text">Marketing</p>
                         <ul class="team__social social-list">
@@ -241,7 +348,30 @@
                         </ul>
                     </li>
                     <li class="team__item">
-                        <img src="./images/mikhailermakov.jpg" alt="Михаил Ермаков" width="270">
+                        <picture>
+                            <source
+                                srcset="
+                                    ./images/mikhailermakov.jpg 1x, 
+                                    ./images/mikhailermakov2x.jpg 2x"
+                                media="(min-width: 1200px)"
+                            >
+                            <source
+                                srcset="
+                                    ./images/mikhailermakovtable.jpg 1x, 
+                                    ./images/mikhailermakovtable2x.jpg 2x"
+                                media="(min-width: 768px)"
+                            >
+                            <source
+                                srcset="
+                                    ./images/mikhailermakovmb.jpg 1x, 
+                                    ./images/mikhailermakovmb2x.jpg 2x"
+                                media="(min-width: 320px)"
+                            >
+                            <img 
+                                src="./images/mikhailermakov.jpg" 
+                                alt="Михаил Ермаков"
+                            >
+                        </picture>
                         <h3 class="team__subtitle">Михаил Ермаков</h3>
                         <p class="team__text">UI Designer</p>
                         <ul class="team__social social-list">

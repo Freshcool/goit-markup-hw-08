@@ -93,9 +93,8 @@ align-items: unset;
   font-size: 14px;
   line-height: 1.14;
   color: var(--background-color);
-  @media screen and (min-width: 768px) {
-    text-align: center;
-  }
+  text-align: center;
+
   @media screen and (min-width: 1200px) {
     text-align: unset;
   }
